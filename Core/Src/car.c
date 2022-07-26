@@ -86,11 +86,11 @@ uint8_t Read_Bat_Voltage()
 {
     uint8_t data[2];
     uint8_t v;
-	I2C_Read_Len(ADC_Bat_Addr,data,2);									//读取电机电压
+	I2C_Read_Len(ADC_Bat_Addr,data,2);		
 	v = data[0] + (data[1]<<8);
     return v;    
 }
-
+//说明：读取池电压
 
 
 

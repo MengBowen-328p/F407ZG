@@ -25,7 +25,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "led.h"
-#include "car.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,8 +90,7 @@ int main(void)
   MX_I2C2_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  Set_Motor_Type(1);
-  Set_Motor_Polarity(1);
+  
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -100,7 +98,6 @@ int main(void)
   while (1)
   {
     Led_Flash();
-    Motor_Go_NoFixed(Speed);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
